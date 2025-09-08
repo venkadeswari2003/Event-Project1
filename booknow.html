@@ -1,41 +1,47 @@
 <html>
+
 <head>
-  
-  <title>Book Your Event</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #FFF0F5;
-      background-image:url("assets/booknow\ img1.jpg");
-      background-repeat: no-repeat; 
-      background-size:cover;
-      background-position:center ;
+ 
+    .bookevent {
+      background-image: url("assets/booknow\ img1.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      padding-bottom: 2%;
+      padding-top: 3%;
       display: flex;
       justify-content: center;
       align-items: center;
-    
     }
+
     .form-container {
       background: #fff;
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       width: 350px;
-      height:550px;
+      /* height: 550px; */
     }
+
     h2 {
       text-align: center;
       color: #E91E63;
       margin-bottom: 15px;
-      margin-top:5px ;
+      margin-top: 5px;
     }
+
     label {
       display: block;
       margin: 5px 0 5px;
       font-weight: bold;
       color: #333;
     }
-    input, select, textarea {
+
+    input,
+    select,
+    textarea {
       width: 100%;
       padding: 10px;
       margin-bottom: 13px;
@@ -43,6 +49,7 @@
       border-radius: 6px;
       font-size: 14px;
     }
+
     button {
       width: 100%;
       padding: 12px;
@@ -53,85 +60,89 @@
       border-radius: 6px;
       cursor: pointer;
     }
+
     button:hover {
       background: #C2185B;
     }
   </style>
 </head>
+
 <body>
-  <div class="form-container">
-    <h2>Book Your Event</h2>
-    <form id="eventform">
-      <label>Full Name</label>
-      <input type="text" id="name" name="name" required>
+  <div class="bookevent">
+    <div class="form-container">
+      <h2>Book Your Event</h2>
+      <form id="eventform">
+        <label>Full Name</label>
+        <input type="text" id="name" name="name" required>
 
-      <label>Email</label>
-      <input type="email" id="email" name="email" required>
+        <label>Email</label>
+        <input type="email" id="email" name="email" required>
 
-      <label>Phone Number</label>
-      <input type="tel" id="phone" name="phone" required>
+        <label>Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
 
-      <label>Event Type</label>
-      <select name="event" id="event">
-        <option>Engagement</option>
-        <option>Mehendi</option>
-        <option>Wedding</option>
-        <option>Reception</option>
-      </select>
+        <label>Event Type</label>
+        <select name="event" id="event">
+          <option>Engagement</option>
+          <option>Mehendi</option>
+          <option>Wedding</option>
+          <option>Reception</option>
+        </select>
 
-      <label>Event Date</label>
-      <input type="date" id="date" name="date" required>
+        <label>Event Date</label>
+        <input type="date" id="date" name="date" required>
 
-       <label>Additional Notes</label>
-      <textarea id="notes" name="notes" rows="1"></textarea>  
+        <label>Additional Notes</label>
+        <textarea id="notes" name="notes" rows="1"></textarea>
 
-      <button type="submit">Submit</button>
+        <button type="submit">Submit</button>
 
-    </form>
-    
-   <script>
-    document.getElementById("eventform").addEventListener("submit", function(event) {
-      event.preventDefault(); // stop form from submitting
+      </form>
 
-      let name = document.getElementById("name").value.trim();
-      let email = document.getElementById("email").value.trim();
-      let phone = document.getElementById("phone").value.trim();
-      let eventType = document.getElementById("event").value;
-      let date = document.getElementById("date").value;
+      <script>
+        document.getElementById("eventform").addEventListener("submit", function (event) {
+          event.preventDefault(); // stop form from submitting
 
-      // Name validation
-      if (name.length < 3) {
-        alert("Full Name must be at least 3 characters long.");
-        return;
-      }
+          let name = document.getElementById("name").value.trim();
+          let email = document.getElementById("email").value.trim();
+          let phone = document.getElementById("phone").value.trim();
+          let eventType = document.getElementById("event").value;
+          let date = document.getElementById("date").value;
 
-      // Email validation
-      let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-      if (!email.match(emailPattern)) {
-        alert("Please enter a valid email address.");
-        return;
-      }
+          // Name validation
+          if (name.length < 3) {
+            alert("Full Name must be at least 3 characters long.");
+            return;
+          }
 
-      // Phone validation (must be 10 digits)
-      if (!/^[0-9]{10}$/.test(phone)) {
-        alert("Phone number must be 10 digits.");
-        return;
-      }
+          // Email validation
+          let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+          if (!email.match(emailPattern)) {
+            alert("Please enter a valid email address.");
+            return;
+          }
 
-      // Event type validation
-      if (eventType === "") {
-        alert("Please select an event type.");
-        return;
-      }
+          // Phone validation (must be 10 digits)
+          if (!/^[0-9]{10}$/.test(phone)) {
+            alert("Phone number must be 10 digits.");
+            return;
+          }
 
-       alert("Thank you!Your event booking is received🎉");
-       document.getElementById("eventform").reset();
+          // Event type validation
+          if (eventType === "") {
+            alert("Please select an event type.");
+            return;
+          }
 
-    });
-  </script>
-  </div> 
+          alert("Thank you!Your event booking is received🎉");
+          document.getElementById("eventform").reset();
 
-  
-  
+        });
+      </script>
+    </div>
+  </div>
+
+
 </body>
+
 </html>
