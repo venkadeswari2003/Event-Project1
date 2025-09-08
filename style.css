@@ -51,6 +51,7 @@ nav ul a {
    font-weight: bold;
    font-style: oblique;
    color: black;
+
 }
 
 .content .btn {
@@ -197,7 +198,7 @@ nav ul a {
    row-gap: 25px;
    column-gap: 20px;
    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-   padding-left:10px;
+   padding-left: 15px;
    position: relative;
 }
 
@@ -274,6 +275,10 @@ nav ul a {
    margin-top: 12px;
    font-family: sans-serif;
 
+}
+
+.price-card a {
+   text-decoration: none;
 }
 
 .price-btn {
@@ -372,25 +377,12 @@ nav ul a {
    background: #e63950;
 }
 
-
-
-
-@media screen and (max-width:1200px) {
-
-   .services {
-      height: min-content;
-      background-size: cover;
-   }
-}
-
-
 @media screen and (max-width:615px) {
    div .about-content {
       top: 20%;
       font-size: 14px;
       padding: 2px;
    }
-
 
    .pricesec {
       background-size: cover;
@@ -427,18 +419,13 @@ nav ul a {
 
 @media screen and (max-width:500px) {
    .event-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 2fr));
-      gap: 20px;
-      padding-left: 3%;
-
+      padding-left: 10%;
    }
 
    .events {
-      width: 100%;
-      display: block;
       background-size: cover;
       background-position: center;
+
    }
 
 
