@@ -20,7 +20,7 @@
     }
 
     .cards:hover {
-        transform: scaley(1.1);
+        transform: scale(1.06);
     }
 
     .invits {
@@ -32,6 +32,26 @@
         margin-top: 2%;
         box-shadow: 2px 5px 5px rgb(245, 116, 137);
         padding: 10px;
+    }
+
+    @media screen and (max-width:1115px) {
+        .cards {
+            display: block;
+            width: 80%;
+            height: 90%;
+            margin-left: 10%;
+        }
+
+        .cards img {
+            width: 100%;
+            height: 100%
+        }
+
+        .invits {
+            font-size: 40px;
+            font-weight: bold;
+            padding: 25px;
+        }
     }
 </style>
 
