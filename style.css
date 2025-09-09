@@ -111,7 +111,7 @@ nav ul a {
 
 .card-body h3 {
    color: #e63950;
-   text-shadow: 2px 2px 3px black;
+   text-shadow: 2px 2px 1px black;
    text-align: center;
    padding-top: 8px;
 }
@@ -155,7 +155,7 @@ nav ul a {
 
 #serv h3 {
    color: #ff145f;
-   text-shadow: 2px 2px 3px black;
+   text-shadow: 2px 2px 1px black;
 }
 
 .about {
@@ -252,7 +252,7 @@ nav ul a {
 .price-card h2 {
    margin-bottom: 10px;
    color: #ff145f;
-   text-shadow: 2px 2px 3px black;
+   text-shadow: 2px 2px 1px black;
 }
 
 .price {
@@ -260,7 +260,7 @@ nav ul a {
    font-weight: bold;
    margin: 15px 0;
    color: #ff145f;
-   text-shadow: 2px 2px 3px black;
+   text-shadow: 2px 2px 1px black;
 }
 
 .price-card ul {
